@@ -1,0 +1,23 @@
+ls -al
+
+touch 文件名
+
+mkdir -p 
+
+cp 源文件 目标文件
+cp -r 
+
+rm  文件名
+rm -rf 
+
+cat 文件名
+
+more 文件名
+
+head -number 文件名
+
+tail -number 文件名
+
+mv 源文件名称 新文件名称
+
+find 搜索的路径 -name 文件名称
