@@ -1,0 +1,14 @@
+-- 统计同一场考试每个人回答正确的数量和回答错误的数量
+SELECT 
+	train_id,
+	user_id, 
+	real_name, 
+	SUM(CASE WHEN is_collect = 0 THEN 1 ELSE 0 END) AS cnt_q,
+	SUM(CASE WHEN is_collect = 1 THEN 1 ELSE 0 END) AS cnt_unq
+FROM buss_answer_sheet_subject 
+WHERE train_id = 7
+GROUP BY train_id, user_id 
+
+-- 不存在就插入
+INSERT INTO buss_tog_edu_ext(train_person_name, train_sfz, train_id,user_id )
+SELECT "小明", '363662562565255521',79, 3379 FROM DUAL WHERE NOT EXISTS (SELECT * FROM buss_tog_edu_ext WHERE train_id = 79 AND user_id = 3379);

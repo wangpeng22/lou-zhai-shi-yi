@@ -1,0 +1,55 @@
+-----------本地项目上传到GitHub的步骤
+
+1.在github上创建一个空间
+
+2.在本地对应目录下执行下面命令:
+
+git init
+
+git add .
+
+git commit -m "注释"
+
+git remote add origin https://github.com/XXX/XXX.git
+
+git push -u origin master
+
+-------------------------------------------------------------
+-----------git切换地址
+
+查看git远程仓库地址
+
+	
+git remote -v
+	
+
+
+设置新仓库地址
+
+	
+git remote set-url origin http://XXXXX/XXXXX.git 
+
+
+查看git远程仓库地址
+
+	
+git remote -v
+	
+
+
+查看本地当前分支
+
+	
+git branch -a 
+
+
+其中remotes/*开头的表示远程分支，其他为本地分支
+
+
+
+把本地分支(master)推送远程仓库分支(master)
+
+	
+git push origin master:master
+
+-------------------------------------------------------------
